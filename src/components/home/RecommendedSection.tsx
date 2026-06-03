@@ -18,12 +18,12 @@ export default function RecommendedSection() {
       ) : (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((it) => (
-            <article key={it.id} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-              {it.image && <img src={it.image} alt={it.title} className="h-40 w-full rounded-md object-cover" />}
-              <div className="mt-3">
+            <article key={it.id} className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md">
+              {it.image && <img src={it.image} alt={it.title} className="w-full h-48 object-cover rounded-t-lg" />}
+              <div className="p-4">
                 <h3 className="text-sm font-semibold text-slate-900">{it.title}</h3>
                 <p className="mt-1 text-xs text-slate-500">{it.type.toUpperCase()} • {it.snippet}</p>
-                <a href={it.href} className="mt-3 inline-block text-sm text-emerald-700 hover:underline">View</a>
+                <a href={it.href} className="mt-3 inline-block text-sm font-medium text-emerald-700 hover:text-emerald-800 transition">View →</a>
               </div>
             </article>
           ))}

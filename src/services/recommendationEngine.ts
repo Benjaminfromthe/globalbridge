@@ -23,7 +23,7 @@ export function recommendForUser(interests: string[] = [], limit = 6): Recommend
     const trendingPosts = posts.filter((p) => p.country === 'Rwanda').slice(0, 3)
     const trendingProducts = products.slice(0, 3)
     const items: RecommendationItem[] = [
-      ...trendingPosts.map((p) => ({ id: p.id, title: p.content.split('.')[0], type: 'post' as const, score: 1, image: p.mediaUrl, snippet: p.content, href: '/social' })),
+      ...trendingPosts.map((p) => ({ id: p.id, title: p.content.split('.')[0], type: 'post' as const, score: 1, image: p.imageUrl, snippet: p.content, href: '/social' })),
       ...trendingProducts.map((p) => ({ id: p.id, title: p.name, type: 'product' as const, score: 1, image: p.imageUrl, snippet: p.category, href: '/marketplace' })),
     ]
     return items.slice(0, limit)
@@ -51,7 +51,7 @@ export function recommendForUser(interests: string[] = [], limit = 6): Recommend
   posts.forEach((po) => {
     const score = scoreTextMatch(po.content + ' ' + (po.country ?? ''), interests)
     if (score > 0) {
-      scored.push({ id: po.id, title: po.content.split('.')[0], type: 'post', score, image: po.mediaUrl, snippet: po.author, href: '/social' })
+      scored.push({ id: po.id, title: po.content.split('.')[0], type: 'post', score, image: po.imageUrl, snippet: po.author, href: '/social' })
     }
   })
 

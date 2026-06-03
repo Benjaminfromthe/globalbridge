@@ -6,7 +6,7 @@ type Props = Post & {
   onComment?: () => void
 }
 
-export default function SocialPost({ author, avatarUrl, mediaUrl, content, likes: initialLikes }: Props) {
+export default function SocialPost({ author, avatarUrl, imageUrl, content, likes: initialLikes }: Props) {
   const [likes, setLikes] = useState(initialLikes ?? 0)
   const [liked, setLiked] = useState(false)
 
@@ -30,7 +30,7 @@ export default function SocialPost({ author, avatarUrl, mediaUrl, content, likes
         </div>
       </div>
 
-      {mediaUrl && <img src={mediaUrl} alt="post media" className="w-full object-cover" style={{ maxHeight: 420 }} />}
+      {imageUrl && <img src={imageUrl} alt="post media" className="w-full h-48 object-cover rounded-lg" />}
 
       <div className="p-4">
         <p className="text-slate-700">{content}</p>
