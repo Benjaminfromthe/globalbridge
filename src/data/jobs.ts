@@ -17,7 +17,7 @@ export const jobs: Job[] = [
     salaryRange: '$300 - $600 / month',
     location: 'Kigali, Rwanda',
     roleType: 'Gig',
-    imageUrl: 'https://source.unsplash.com/featured/1200x800/?rwanda,guide,tour',
+    imageUrl: '/assets/job-tour-guide.jpg',
     description: 'Lead small-group tours focusing on cultural heritage and community experiences.',
   },
   {
@@ -27,7 +27,7 @@ export const jobs: Job[] = [
     salaryRange: '$800 - $1,200 / month',
     location: 'Remote (Rwanda preferred)',
     roleType: 'Full-time',
-    imageUrl: 'https://source.unsplash.com/featured/1200x800/?rwanda,digital,office',
+    imageUrl: '/assets/job-marketing.jpg',
     description: 'Manage digital campaigns, social media, and content for tourism products.',
   },
   {
@@ -37,7 +37,7 @@ export const jobs: Job[] = [
     salaryRange: '$500 - $900 / month',
     location: 'Kigali, Rwanda',
     roleType: 'Contract',
-    imageUrl: 'https://source.unsplash.com/featured/1200x800/?rwanda,logistics,transport',
+    imageUrl: '/assets/job-logistics.jpg',
     description: 'Coordinate shipments, local transport, and supplier communication for tourism services.',
   },
   {
@@ -47,7 +47,7 @@ export const jobs: Job[] = [
     salaryRange: '$20 - $40 / hour',
     location: 'Remote',
     roleType: 'Gig',
-    imageUrl: 'https://source.unsplash.com/featured/1200x800/?rwanda,professional,workspace',
+    imageUrl: '/assets/job-translation.jpg',
     description: 'Translate marketing materials and product descriptions into local languages.',
   },
 ]

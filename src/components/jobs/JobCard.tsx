@@ -1,5 +1,7 @@
 import type { MouseEventHandler } from 'react'
 
+import ImageWithFallback from '../ImageWithFallback'
+
 type Props = {
   id: string
   title: string
@@ -15,7 +17,7 @@ export default function JobCard({ id, title, company, salary, location, imageUrl
   return (
     <div className="flex w-full flex-col gap-3 rounded-lg border border-slate-200 bg-white p-4 shadow-sm">
       {imageUrl ? (
-        <img src={imageUrl} alt={title} className="h-48 w-full rounded-xl object-cover" />
+        <ImageWithFallback src={imageUrl} alt={title} className="h-48 w-full rounded-xl object-cover" />
       ) : (
         <div className="h-48 w-full rounded-xl bg-slate-100" />
       )}

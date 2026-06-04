@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Heart, MessageCircle, Share2, User } from 'lucide-react'
 import type { Post } from '../../data/posts'
+import ImageWithFallback from '../ImageWithFallback'
 
 type Props = Post & {
   onComment?: () => void
@@ -22,7 +23,16 @@ export default function SocialPost({ author, avatarUrl, imageUrl, content, likes
     <article className="rounded-2xl border border-slate-200 bg-white shadow-sm">
       <div className="flex items-center gap-3 p-4">
         <div className="h-10 w-10 flex-none overflow-hidden rounded-full bg-slate-100">
-          {avatarUrl ? <img src={avatarUrl} alt={author} className="h-full w-full object-cover" /> : <User />}
+          {avatarUrl ? (
+            <ImageWithFallback
+              src={avatarUrl}
+              alt={author}
+              className="h-full w-full object-cover"
+              fallbackSrc="/assets/placeholder-image.jpg"
+            />
+          ) : (
+            <User />
+          )}
         </div>
         <div>
           <div className="text-sm font-semibold text-slate-900">{author}</div>
@@ -30,7 +40,14 @@ export default function SocialPost({ author, avatarUrl, imageUrl, content, likes
         </div>
       </div>
 
-      {imageUrl && <img src={imageUrl} alt="post media" className="w-full h-48 object-cover rounded-lg" />}
+      {imageUrl && (
+        <ImageWithFallback
+          src={imageUrl}
+          alt="post media"
+          className="w-full h-48 object-cover rounded-lg"
+          fallbackSrc="/assets/placeholder-image.jpg"
+        />
+      )}
 
       <div className="p-4">
         <p className="text-slate-700">{content}</p>

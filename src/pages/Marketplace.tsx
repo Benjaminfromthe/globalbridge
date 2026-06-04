@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import CategoryCard from '../components/marketplace/CategoryCard'
+import ImageWithFallback from '../components/ImageWithFallback'
 import { products as mockProducts } from '../data/products'
 import { ShoppingCart } from 'lucide-react'
 
@@ -43,7 +44,7 @@ export default function Marketplace() {
         <div className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {data.map((p) => (
             <article key={p.id} className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md">
-              <img src={p.imageUrl} alt={p.name} className="h-44 w-full object-cover" />
+              <ImageWithFallback src={p.imageUrl} alt={p.name} className="h-44 w-full object-cover" />
               <div className="p-4">
                 <h4 className="text-sm font-semibold text-slate-900">{p.name}</h4>
                 <div className="mt-2 flex items-center justify-between">

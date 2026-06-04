@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import type { ReactNode } from 'react'
+import ImageWithFallback from '../ImageWithFallback'
 
 type Props = {
   title: string
@@ -11,11 +12,14 @@ type Props = {
 export default function CategoryCard({ title, icon, path = '#', imageUrl }: Props) {
   return (
     <Link to={path} className="block overflow-hidden rounded-xl border border-slate-200 bg-white hover:shadow-lg hover:translate-y-[-2px] transition-transform">
-      {imageUrl ? (
-        <div className="overflow-hidden">
-          <img src={imageUrl} alt={title} className="w-full h-48 object-cover" />
-        </div>
-      ) : null}
+      <div className="overflow-hidden">
+        <ImageWithFallback
+          src={imageUrl}
+          alt={title}
+          className="w-full h-48 object-cover"
+          fallbackSrc="/assets/placeholder-image.jpg"
+        />
+      </div>
       <div className="p-4">
         <div className="flex items-center gap-3">
           <div className="rounded-md bg-blue-600 p-2 text-white">{icon}</div>
