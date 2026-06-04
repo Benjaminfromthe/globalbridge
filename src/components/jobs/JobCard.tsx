@@ -6,13 +6,20 @@ type Props = {
   company: string
   salary: string
   location: string
+  imageUrl?: string
   type?: string
   onApply?: MouseEventHandler<HTMLButtonElement>
 }
 
-export default function JobCard({ id, title, company, salary, location, type = 'Full-time', onApply }: Props) {
+export default function JobCard({ id, title, company, salary, location, imageUrl, type = 'Full-time', onApply }: Props) {
   return (
     <div className="flex w-full flex-col gap-3 rounded-lg border border-slate-200 bg-white p-4 shadow-sm">
+      {imageUrl ? (
+        <img src={imageUrl} alt={title} className="h-48 w-full rounded-xl object-cover" />
+      ) : (
+        <div className="h-48 w-full rounded-xl bg-slate-100" />
+      )}
+
       <div className="flex items-start justify-between gap-4">
         <div>
           <h3 className="text-lg font-semibold text-slate-900">{title}</h3>

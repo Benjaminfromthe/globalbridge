@@ -125,6 +125,7 @@ export default function Jobs() {
                 company={j.company}
                 salary={j.salaryRange}
                 location={j.location}
+                imageUrl={j.imageUrl}
                 type={j.roleType}
                 onApply={() => alert(`Apply flow placeholder for ${j.title}`)}
               />
