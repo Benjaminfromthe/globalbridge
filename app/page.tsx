@@ -1,18 +1,18 @@
 export const metadata = {
-  title: "GlobalBridge | Home",
+  title: "GlobalBridge - Connecting Rwanda to the World",
   description:
-    "GlobalBridge connects Rwanda to the world with trusted business, community, and export support.",
+    "GlobalBridge is a platform connecting Rwanda and Rwandans to global opportunities, communities, and partnerships.",
   openGraph: {
-    title: "GlobalBridge | Home",
+    title: "GlobalBridge - Connecting Rwanda to the World",
     description:
-      "GlobalBridge connects Rwanda to the world with trusted business, community, and export support.",
+      "GlobalBridge is a platform connecting Rwanda and Rwandans to global opportunities, communities, and partnerships.",
     type: "website",
   },
 };
 
 export default function HomePage() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-12">
+    <section className="mx-auto max-w-7xl px-6 py-12 space-y-16">
       <article id="hero" className="space-y-8 py-12">
         <div className="max-w-3xl">
           <p className="text-sm uppercase tracking-[0.35em] text-cyan-700">GlobalBridge</p>
@@ -63,6 +63,21 @@ export default function HomePage() {
             readiness from trusted local experts.
           </p>
         </article>
+      </section>
+
+      <section id="about" className="rounded-3xl border border-slate-200 bg-slate-50 p-10 shadow-sm shadow-slate-900/5">
+        <div className="max-w-4xl">
+          <h2 className="text-3xl font-semibold text-slate-900">About GlobalBridge</h2>
+          <p className="mt-4 text-lg leading-8 text-slate-700">
+            GlobalBridge is a platform that connects Rwanda and Rwandans to global
+            opportunities, communities, and partnerships through trusted networks,
+            mentorship, and export readiness support.
+          </p>
+          <p className="mt-4 text-slate-600">
+            We empower local businesses, creatives, and social leaders to tell their
+            stories, find partners, and grow Rwanda’s presence on the world stage.
+          </p>
+        </div>
       </section>
 
       <section id="cta" className="rounded-3xl border border-cyan-100 bg-cyan-50 p-10 text-slate-900">

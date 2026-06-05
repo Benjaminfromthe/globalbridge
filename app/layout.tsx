@@ -3,19 +3,19 @@ import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "GlobalBridge | Connecting Rwanda to the World",
+  title: "GlobalBridge - Connecting Rwanda to the World",
   description:
-    "GlobalBridge connects Rwanda to the world with trusted opportunities, community, and local growth.",
+    "GlobalBridge is a platform connecting Rwanda and Rwandans to global opportunities, communities, and partnerships.",
   openGraph: {
-    title: "GlobalBridge | Connecting Rwanda to the World",
+    title: "GlobalBridge - Connecting Rwanda to the World",
     description:
-      "GlobalBridge connects Rwanda to the world with trusted opportunities, community, and local growth.",
+      "GlobalBridge is a platform connecting Rwanda and Rwandans to global opportunities, communities, and partnerships.",
     type: "website",
   },
   twitter: {
-    title: "GlobalBridge | Connecting Rwanda to the World",
+    title: "GlobalBridge - Connecting Rwanda to the World",
     description:
-      "GlobalBridge connects Rwanda to the world with trusted opportunities, community, and local growth.",
+      "GlobalBridge is a platform connecting Rwanda and Rwandans to global opportunities, communities, and partnerships.",
     card: "summary_large_image",
   },
 };
